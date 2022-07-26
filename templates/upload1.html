@@ -1,0 +1,60 @@
+<!doctype html>
+<title>Python Flask - Video Upload and Play Example</title>
+<h2>Select a video to upload and play</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+
+<form method="post" action="/upload1" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required><br><br>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Upload">
+        <!-- <select name="text1" id="colors">
+            <option value="1">Red</option>
+            <option value="2">Blues</option>
+            <option value="3">White</option>
+            <option value="4">Yellow</option>
+            <option value="5">Black</option>
+        </select>
+        <select name="text2" id="colors1">
+            <option value="1">Red</option>
+            <option value="2">Blue</option>
+            <option value="3">White</option>
+            <option value="4">Yellow</option>
+            <option value="5">Black</option>
+        </select> -->
+	</p>
+</form>
+
+
+
+<div class="container">
+    
+    <div class="topright"><button><a href="/">Back</a></button></div>
+  </div>
+
+
+
+{% extends 'base1.html'%}{% block content %}
+
+<h1 style="text-align: center;">Motion DETECTION</h1>
+
+
+{% if filename %}
+<div style="justify-content: center; display: flex; margin-top: 30px;"><img src="{{ url_for('video1', filename=filename) }}"></div>
+{% endif %}
+{% endblock %}
+
+

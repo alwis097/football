@@ -1,0 +1,75 @@
+<!doctype html>
+<title>Python Flask - Video Upload and Play Example</title>
+<h2>Select a video to upload and play</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+
+
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required><br><br>
+			<!-- <input type="text" name="text1" >
+			<input type="text" name="text2" > -->
+			<select name="text1" id="colors">
+				<option value="1">Red</option>
+				<option value="2">Blues</option>
+				<option value="3">White</option>
+				<option value="4">Yellow</option>
+				<option value="5">Black</option>
+			</select>
+			<select name="text2" id="colors1">
+				<option value="1">Red</option>
+				<option value="2">Blue</option>
+				<option value="3">White</option>
+				<option value="4">Yellow</option>
+				<option value="5">Black</option>
+			</select>
+
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Upload">
+	</p>
+</form>
+
+
+<button><a href="/upload1">motion</a></button>
+<!-- {% if filename %}
+	<div class="video-container" style="margin: 10px auto;">
+    {{Video_FILE}}
+		<video width="50%" height="50%" autoplay="autoplay" controls="controls" preload="preload">
+			<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4"></source>
+
+			
+		</video>
+    
+	</div>
+{% endif %} -->
+
+
+
+
+
+
+{% extends 'base.html'%}{% block content %}
+
+<h1 style="text-align: center;">Foot ball team detection video</h1>
+
+
+{% if filename %}
+<div style="justify-content: center; display: flex; margin-top: 30px;"><img src="{{ url_for('video', filename=filename) }}"></div>
+
+{{x}}
+{% endif %}
+{% endblock %}
