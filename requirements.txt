@@ -7,4 +7,5 @@ pandas==1.3.2
 Pillow==9.2.0
 pyrsistent==0.18.0
 Werkzeug==2.0.1
-~pencv_python==4.5.5.64
+opencv-python-headless==4.2.0.32
+opencv_python==4.5.5.64
