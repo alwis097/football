@@ -8,4 +8,4 @@ Pillow==9.2.0
 pyrsistent==0.18.0
 Werkzeug==2.0.1
 #opencv-python-headless==4.3.0.38
-opencv-contrib-python==3.4.0.12
+opencv-contrib-python==3.4.17.63
