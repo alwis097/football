@@ -11,7 +11,7 @@ opencv-python-headless==4.3.0.38
 #opencv-contrib-python==3.4.17.63
 
 #opencv-python-headless==4.3.0.38
-opencv_python==4.5.5.64
+#opencv_python==4.5.5.64
 
 
 gunicorn
