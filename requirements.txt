@@ -13,5 +13,5 @@ Werkzeug==2.0.1
 
 opencv_python==4.5.5.64
 
-opencv-python-headless==4.2.0.32
+opencv-python-headless==4.3.0.38
 gunicorn
